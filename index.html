@@ -12,13 +12,13 @@
 
     <meta property="og:type" content="website">
 <meta property="og:title" content="谨言慎行,戒急用忍,行稳致远">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://www.panakot.cn/index.html">
 <meta property="og:site_name" content="谨言慎行,戒急用忍,行稳致远">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="og:image" content="http://www.panakot.cn/images/og_image.png">
 <meta property="article:author" content="Panakot">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
+<meta name="twitter:image" content="http://www.panakot.cn/images/og_image.png">
 
 
 
@@ -139,7 +139,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    16 分钟 读完 (大约 2356 个字)
+                    16 分钟 读完 (大约 2379 个字)
                 </span>
                 
                 
@@ -148,18 +148,18 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2020/03/16/04_deploy_hexo/">04_deploy_hexo</a>
+                <a class="has-link-black-ter" href="/2020/03/16/04_deploy_hexo/04_deploy_hexo/">04_deploy_hexo/04_deploy_hexo</a>
             
         </h1>
         <div class="content">
             <h2 id="部署HEXO"><a href="#部署HEXO" class="headerlink" title="部署HEXO"></a>部署HEXO</h2><h3 id="一、-部署到GitHub"><a href="#一、-部署到GitHub" class="headerlink" title="一、 部署到GitHub"></a>一、 部署到GitHub</h3><h4 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1. 准备工作"></a>1. 准备工作</h4><p>&emsp;&emsp;1）如果目前有意搭建自己的个人博客，而此前没有GitHub账号，点击此处前往GitHub官网注册一个GitHub账号。账号注册流程就不在此处展示操作了，请自行注册。  </p>
-<p>&emsp;&emsp;2）注册完成后，新建一个公开仓库，仓库名称格式为<code>your_username.github.id</code>。例如我的GitHub的仓库名为<code>panakot</code>,那么生成的仓库地址名称就是panakot.github.io。</p>
+<p>&emsp;&emsp;2）注册完成后，新建一个公开仓库，仓库名称格式为<code>your_username.github.id</code>。例如我的GitHub的仓库名为<code>panakot</code>,那么生成的仓库地址名称就是panakot.github.io。<br><img src="/2020/03/16/04_deploy_hexo/04_deploy_hexo/GitHub_Repository_creaate.png" alt></p>
 <p>&emsp;&emsp;3）创建完成后，建议用记事本记录仓库的HTTPS/SSH地址，后期设置<code>_config.yml</code>会用上。该仓库的HTTPS的一般格式为<code>https://github.com/your_username/your_reponame.github.io.git</code>;SSH的一般格式为<code>git@github.com:your_username/your_reponame.github.io.git</code>。</p>
 <h4 id="2-安装部署插件"><a href="#2-安装部署插件" class="headerlink" title="2. 安装部署插件"></a>2. 安装部署插件</h4><pre><code>$ npm install hexo-deployer-git --save
 $ npm install hexo-server --save   </code></pre><h4 id="3-配置Git"><a href="#3-配置Git" class="headerlink" title="3. 配置Git"></a>3. 配置Git</h4><p>&emsp;&emsp;如果你只是安装好了 Git 但没有配置过你的 Git ，那么现在需要做的第一件事情就是设置你的 Git 用户名和邮箱。 在 Git Bash 中执行以下两条命令配置你的用户名和邮箱，这里建议用户名和邮箱与你的 GitHub 用户名和邮箱保持一致。   </p>
 <pre><code>$ git config --global user.name &quot;Your_user_name&quot;  
 $ git config --global user.email Your_email@example.com   </code></pre><blockquote>
-<p><font size="4"  color="FF0033">提醒</font><br>每次 Git 提交时都会附带这两条信息，用于记录是谁提交的更新，并且会随更新内容一起被记录到历史记录中。简单说，是用来标记的你的身份的</p>
+<p><font size="4" color="FF0033">提醒</font><br>每次 Git 提交时都会附带这两条信息，用于记录是谁提交的更新，并且会随更新内容一起被记录到历史记录中。简单说，是用来标记的你的身份的</p>
 </blockquote>
 <p>每次 Git 提交时都会附带这两条信息，用于记录是谁提交的更新，并且会随更新内容一起被记录到历史记录中。简单说，是用来标记的你的身份的</p>
 <h4 id="4-配置站点-config-yml文件"><a href="#4-配置站点-config-yml文件" class="headerlink" title="4. 配置站点_config.yml文件"></a>4. 配置站点<code>_config.yml</code>文件</h4><p>&emsp;&emsp;用记事本或Sublime Text3、Visual Studio Code打开，拉到文末，找到<code>deploy：</code>。这里就会用到我建议使用记事本记录仓库的SSH地址，需要修改的配置参考如下：   </p>
@@ -187,13 +187,14 @@ $ git config --global user.email Your_email@example.com   </code></pre><blockquo
 <pre><code>&gt; Generating public/private rsa key pair.  </code></pre><p>&emsp;&emsp;③ 提示您“Enter a file in which to save the key（输入要保存密钥的文件）”时，按 Enter 键。 这将接受默认文件位置。  </p>
 <pre><code>&gt; Enter a file in which to save the key (/c/Users/you/.ssh/id_rsa):[Press enter]  </code></pre><p>&emsp;&emsp;④ 在提示时输入安全密码。 这样可以更安全的保护自己的密钥。 </p>
 <pre><code>&gt; Enter passphrase (empty for no passphrase): [Type a passphrase]
-&gt; Enter same passphrase again: [Type passphrase again]  </code></pre><p>&emsp;&emsp;<strong>3）将SSH密钥添加到GitHub账户</strong>   </p>
+&gt; Enter same passphrase again: [Type passphrase again]   </code></pre><p><img src="/2020/03/16/04_deploy_hexo/04_deploy_hexo/ssh-keygen.png" alt></p>
+<p>&emsp;&emsp;<strong>3）将SSH密钥添加到GitHub账户</strong>   </p>
 <p>&emsp;&emsp;① 找到<del>/.ssh目录下的<code>id_rsa.pub</code>，将SSH公钥钥复制到剪贴板。或通过Git Base Here使用 <code>cd ~/.ssh</code> 进入.ssh目录，然后使用 <code>ll</code> 查询当前文件夹下的文件，然后使用 <code>clip &lt; ~/.ssh/id_rsa.pub</code> 复制</del>/.ssh/id_rsa.pub文件中的公钥信息。  </p>
 <p>&emsp;&emsp;② 登录GitHub，在页面的右上角，单击您的个人资料照片，然后单击 Settings（设置）。  </p>
 <p>&emsp;&emsp;在用户设置侧边栏中，单击 SSH and GPG keys（SSH 和 GPG 密钥）。  </p>
 <p>&emsp;&emsp;单击 New SSH key（新 SSH 密钥）或 Add SSH key（添加 SSH 密钥）。  </p>
 <p>&emsp;&emsp;在 “Title”（标题）字段中，为新密钥添加描述性标签。将密钥粘贴到 “Key”（密钥）字段。最后单击 Add SSH key（添加 SSH 密钥）。   </p>
-<p>&emsp;&emsp;如有提示，请确认您的 GitHub 密码。  </p>
+<p>&emsp;&emsp;如有提示，请确认您的 GitHub 密码。<br><img src="/2020/03/16/04_deploy_hexo/04_deploy_hexo/ssh_clip.png" alt><br><img src="/2020/03/16/04_deploy_hexo/04_deploy_hexo/GitHub_Setings.png" alt><br><img src="/2020/03/16/04_deploy_hexo/04_deploy_hexo/GitHub_SSH_Keys_New.png" alt></p>
 <p>&emsp;&emsp;<strong>4）测试SSH连接</strong>   </p>
 <p>&emsp;&emsp;以上操作完成后，测试连接时，您将需要使用密码（即您之前创建的 SSH 密钥密码）验证此操作。  </p>
 <p>&emsp;&emsp; 打开Git Base Here，输入以下内容：</p>
@@ -204,15 +205,17 @@ $ git config --global user.email Your_email@example.com   </code></pre><blockquo
 <pre><code>&gt; The authenticity of host &apos;github.com (IP ADDRESS)&apos; can&apos;t be established.
   &gt; RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
   &gt; Are you sure you want to continue connecting (yes/no)?  </code></pre><p>&emsp;&emsp;验证您看到的消息中的指纹匹配步骤 2 中的消息之一，然后输入 yes：  </p>
-<pre><code>&gt; Hi username! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</code></pre><h4 id="6-发布到GitHub"><a href="#6-发布到GitHub" class="headerlink" title="6. 发布到GitHub"></a>6. 发布到GitHub</h4><p>&emsp;&emsp;在本地的 Hexo 站点根目录下，执行如下命令即可部署到 GitHub Pages 上。  </p>
+<pre><code>&gt; Hi username! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</code></pre><p><img src="/2020/03/16/04_deploy_hexo/04_deploy_hexo/SSH-T.png" alt>  </p>
+<h4 id="6-发布到GitHub"><a href="#6-发布到GitHub" class="headerlink" title="6. 发布到GitHub"></a>6. 发布到GitHub</h4><p>&emsp;&emsp;在本地的 Hexo 站点根目录下，执行如下命令即可部署到 GitHub Pages 上。  </p>
 <pre><code>$ hexo clean &amp;&amp; hexo d -g  </code></pre><blockquote>
-<p><font size="4"  color="339933">提醒</font><br>如果是第一次使用，会弹出一个登录框，需要登录你的 GitHub 账号。  </p>
+<p><font size="4" color="339933">提醒</font><br>如果是第一次使用，会弹出一个登录框，需要登录你的 GitHub 账号。  </p>
 </blockquote>
 <h4 id="7-配置个性化域名和域名解析"><a href="#7-配置个性化域名和域名解析" class="headerlink" title="7. 配置个性化域名和域名解析"></a>7. 配置个性化域名和域名解析</h4><p>&emsp;&emsp;1) 如果你拥有个人域名，请用 A 记录解析到以下 IP 中的任意一个。如果使用 CNAME 请解析到你的 GitHub 仓库名称。   </p>
 <pre><code>185.199.108.153  
 185.199.109.153  
 185.199.110.153  
 185.199.111.153  </code></pre><p>&emsp;&emsp; 以上地址是通过域名解析你的仓库地址<code>your_username.github.io</code>得到的IP地址；用于解析您上传到GitHub网站的GitHub Pages。  </p>
+<p><img src="/2020/03/16/04_deploy_hexo/04_deploy_hexo/nslookup_github.png" alt></p>
 <p>&emsp;&emsp;云服务器（阿里云、腾讯云、百度云等）设置域名解析参考如下表格。 </p>
 <table>
 <thead>
@@ -243,13 +246,14 @@ $ git config --global user.email Your_email@example.com   </code></pre><blockquo
 </tr>
 </tbody></table>
 <p>&emsp;&emsp;2) 打开仓库，点击设置，找到GitHub Pages项目，修改Custom domain选项的值为您自定义的域名（注意此处不需要填写http/https://等前缀）。  </p>
+<p><img src alt></p>
 <p>&emsp;&emsp;3）勾选Custom domain选项下的Enforce HTTPS选项，强制开启https。如果遇到Enforce HTTPS选项无法打开，可以稍等一会再尝试。  </p>
 <blockquote>
-<p><font size="4"  color="339933">提醒</font><br>同时需要在本地的 source 目录新建一个 CNAME 文件，内容为你的自定义域名（不用带http | https://等前缀）。否则无法使用自定义域名功能（ hexo d 生成的文件没有 CNAME 文件，导致仓库的自定域名设置失效）。</p>
+<p><font size="4" color="339933">提醒</font><br>同时需要在本地的 source 目录新建一个 CNAME 文件，内容为你的自定义域名（不用带http | https://等前缀）。否则无法使用自定义域名功能（ hexo d 生成的文件没有 CNAME 文件，导致仓库的自定域名设置失效）。</p>
 </blockquote>
 <p>&emsp;&emsp;如果出现以下错误提示，请参照上面的提醒操作，在本地source目录新建一个CNAME的文件，注意没有任何后缀格式，然后用记事本打开，输入您的个性化域名，如<a href="http://www.baihu.com或baihu.com。最后使用`hexo">www.baihu.com或baihu.com。最后使用`hexo</a> d`重新将本地的博客文件上传到GitHub Pages。  </p>
-<p><img src="image/GitHub_Pages_CNAME_ERROR.png" alt=""></p>
-<p>&emsp;&emsp;<font size="4" >到这里，您的网站就部署完成了，后期就可以开始写文章、修改主题、优化网站等操作了。下面的文章将如何教会您完成上面的操作。让我们继续学习吧。</font></p>
+<p><img src="/2020/03/16/04_deploy_hexo/04_deploy_hexo/GitHub_Pages_CNAME_ERROR.png" alt></p>
+<p>&emsp;&emsp;<font size="4">到这里，您的网站就部署完成了，后期就可以开始写文章、修改主题、优化网站等操作了。下面的文章将如何教会您完成上面的操作。让我们继续学习吧。</font></p>
 
         </div>
         
@@ -278,7 +282,7 @@ $ git config --global user.email Your_email@example.com   </code></pre><blockquo
                 <span class="level-item has-text-grey">
                     
                     
-                    14 分钟 读完 (大约 2122 个字)
+                    14 分钟 读完 (大约 2118 个字)
                 </span>
                 
                 
@@ -287,7 +291,7 @@ $ git config --global user.email Your_email@example.com   </code></pre><blockquo
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2020/03/16/03_conf_hexo/">03_conf_hexo</a>
+                <a class="has-link-black-ter" href="/2020/03/16/03_conf_hexo/03_conf_hexo/">03_conf_hexo/03_conf_hexo</a>
             
         </h1>
         <div class="content">
@@ -296,12 +300,12 @@ $ git config --global user.email Your_email@example.com   </code></pre><blockquo
 &emsp;安装好 Hexo 后即可建立你的网站。这里整理两种方式：  
 &emsp;&emsp;① 在某盘符新建一个文件夹，命名定义自己喜欢的、方便的。然后鼠标双击进入文件夹，通过鼠标右键，点击" Git Base Here "，打开当前路径。使用如下命令：  
 
-<pre><code>hexo init    //hexo会在当前路径的文件夹中创建所需的文件  </code></pre><p>&emsp;&emsp;图1：<br><img src="image/git_base_here1.png" alt="图1">  </p>
-<p>&emsp;&emsp;图2：<br><img src="image/hexo_install.png" alt="图2"><br>&emsp;&emsp;②随便在Windwons的任何文件夹点击鼠标右键，通过” Git Base Here “中来创建hexo所需的文件。使用命令如下：  </p>
+<pre><code>hexo init    //hexo会在当前路径的文件夹中创建所需的文件  </code></pre><p>&emsp;&emsp;图1：<br><img src="/2020/03/16/03_conf_hexo/03_conf_hexo/git_base_here1.png" alt="图1">  </p>
+<p>&emsp;&emsp;图2：<br><img src="/2020/03/16/03_conf_hexo/03_conf_hexo/hexo_install.png" alt="图2"><br>&emsp;&emsp;②随便在Windwons的任何文件夹点击鼠标右键，通过” Git Base Here “中来创建hexo所需的文件。使用命令如下：  </p>
 <pre><code>mkdir /j/Blog/www.panakot.cn &amp;&amp; cd /j/Blog/www.panakot.cn   //在J盘的Blog文件下创建www.panakot.cn文件夹并进入到该文件夹  
 
 hexo init                                                  //hexo会在当前路径的文件夹中创建所需的文件  </code></pre><p>&emsp;&emsp;图3：  </p>
-<p><img src="image/hexo_mkdir.png" alt="图3">  </p>
+<p><img src="/2020/03/16/03_conf_hexo/03_conf_hexo/hexo_mkdir.png" alt="图3">  </p>
 <p>&emsp;新建完成后，指定文件夹的目录如下：</p>
 <pre><code>.  
 ├── themes   
@@ -310,7 +314,7 @@ hexo init                                                  //hexo会在当前路
 ├── source  
 |   ├── _drafts  
 |   └── _posts  
-└──_config.yml</code></pre><p>&emsp;&emsp;图4：<br><img src="image/hexo_install_file.png" alt="图4">   </p>
+└──_config.yml</code></pre><p>&emsp;&emsp;图4：<br><img src="/2020/03/16/03_conf_hexo/03_conf_hexo/hexo_install_file.png" alt="图4">   </p>
 <p>&emsp;重点解析该类文件夹及文件的功能和作用： </p>
 <p>&emsp;&emsp;<strong>themes</strong>   </p>
 <p>&emsp;&emsp;主题文件夹。Hexo 会根据主题来生成静态页面。默认会生成一个landscape的主题文件夹，你也可以去<a href="https://hexo.io/zh-cn/">Hexo官网</a>下载自己如意的Hexo主题，然后将下载好的主题放在该目录下，稍后再介绍如何修改主题。<br>&emsp;&emsp;<strong>scaffolds</strong>  </p>
@@ -469,7 +473,7 @@ deploy:                                //部署的设置
                 <span class="level-item has-text-grey">
                     
                     
-                    5 分钟 读完 (大约 738 个字)
+                    5 分钟 读完 (大约 735 个字)
                 </span>
                 
                 
@@ -478,7 +482,7 @@ deploy:                                //部署的设置
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2020/03/16/02_install_hexo/">02_install_hexo</a>
+                <a class="has-link-black-ter" href="/2020/03/16/02_install_hexo/02_install_hexo/">02_install_hexo/02_install_hexo</a>
             
         </h1>
         <div class="content">
@@ -497,7 +501,7 @@ deploy:                                //部署的设置
 <li>Mac：使用 <a href="https://brew.sh/">Homebrew</a>, <a href="https://www.macports.org/">MacPorts</a> 或者下载<a href="https://sourceforge.net/projects/git-osx-installer/">安装程序</a>。  </li>
 <li>Linux (Ubuntu, Debian)：<code>sudo apt-get install git-core</code>。</li>
 <li>Linux (Fedora, Red Hat, CentOS)：<code>sudo yum install git-core</code>。<blockquote>
-<p><font size="4"  color="FF0033">Warning</font><br>由于墙的问题，我们访问上面的资源，有几个问题：1）加载慢； 2）打不开； 3）下载速度小。<br>这里给个建议——使用代理，不推荐使用，因为考虑安全性的问题。也可以使用这个<a href="https://mirrors.edge.kernel.org/pub/software/scm/git/">网站</a>适用于Linux安装；Windows安装可以下载GitHub【<a href="https://github.com/waylau/git-for-win">waylau/git-for-win</a>】收录了存储于百度云的下载地址,对于中国大陆地区用户，可以前往<a href="https://npm.taobao.org/mirrors/git-for-windows/">淘宝 Git for Windows镜像 </a>下载Git安装包。 </p>
+<p><font size="4" color="FF0033">Warning</font><br>由于墙的问题，我们访问上面的资源，有几个问题：1）加载慢； 2）打不开； 3）下载速度小。<br>这里给个建议——使用代理，不推荐使用，因为考虑安全性的问题。也可以使用这个<a href="https://mirrors.edge.kernel.org/pub/software/scm/git/">网站</a>适用于Linux安装；Windows安装可以下载GitHub【<a href="https://github.com/waylau/git-for-win">waylau/git-for-win</a>】收录了存储于百度云的下载地址,对于中国大陆地区用户，可以前往<a href="https://npm.taobao.org/mirrors/git-for-windows/">淘宝 Git for Windows镜像 </a>下载Git安装包。 </p>
 </blockquote>
 <p></p>
 ><font size="4" color="339933">Take a moment</font>   
@@ -520,11 +524,11 @@ deploy:                                //部署的设置
 <pre><code>$ wget -qO- https://raw.github.com/creationix/nvm/v0.33.11/install.sh | sh  </code></pre><p>&emsp;&emsp;安装完成后，重启终端并执行下列命令即可安装 Node.js。  </p>
 <pre><code>$ nvm install stable  </code></pre><h3 id="4-Hexo安装"><a href="#4-Hexo安装" class="headerlink" title="4. Hexo安装"></a>4. Hexo安装</h3><p>&emsp;&emsp;所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。  </p>
 <pre><code>$ npm install -g hexo-cli  </code></pre><h3 id="5-验证软件是否安装成功"><a href="#5-验证软件是否安装成功" class="headerlink" title="5. 验证软件是否安装成功"></a>5. 验证软件是否安装成功</h3><p>&emsp;&emsp;1) 检查Git  </p>
-<p><img src="image/git_v.png" alt=""></p>
+<p><img src="/2020/03/16/02_install_hexo/02_install_hexo/git_v.png" alt></p>
 <p>&emsp;&emsp;2) 检查Node.js </p>
-<p><img src="image/node_v.png" alt=""></p>
+<p><img src="/2020/03/16/02_install_hexo/02_install_hexo/node_v.png" alt></p>
 <p>&emsp;&emsp;3) 检查Hexo </p>
-<p><img src="image/hexo-v.png" alt=""></p>
+<p><img src="/2020/03/16/02_install_hexo/02_install_hexo/hexo-v.png" alt></p>
 
         </div>
         
@@ -562,7 +566,7 @@ deploy:                                //部署的设置
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2020/03/16/01_grasp_hexo/">01_grasp_hexo</a>
+                <a class="has-link-black-ter" href="/2020/03/16/01_grasp_hexo/01_grasp_hexo/">01_grasp_hexo/01_grasp_hexo</a>
             
         </h1>
         <div class="content">
@@ -758,16 +762,16 @@ deploy:                                //部署的设置
         
         <article class="media">
             
-            <a href="/2020/03/16/04_deploy_hexo/" class="media-left">
+            <a href="/2020/03/16/04_deploy_hexo/04_deploy_hexo/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="04_deploy_hexo">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="04_deploy_hexo/04_deploy_hexo">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-16T07:46:37.349Z">2020-03-16</time></div>
-                    <a href="/2020/03/16/04_deploy_hexo/" class="title has-link-black-ter is-size-6 has-text-weight-normal">04_deploy_hexo</a>
+                    <a href="/2020/03/16/04_deploy_hexo/04_deploy_hexo/" class="title has-link-black-ter is-size-6 has-text-weight-normal">04_deploy_hexo/04_deploy_hexo</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -777,16 +781,16 @@ deploy:                                //部署的设置
         
         <article class="media">
             
-            <a href="/2020/03/16/03_conf_hexo/" class="media-left">
+            <a href="/2020/03/16/03_conf_hexo/03_conf_hexo/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="03_conf_hexo">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="03_conf_hexo/03_conf_hexo">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-16T07:46:37.306Z">2020-03-16</time></div>
-                    <a href="/2020/03/16/03_conf_hexo/" class="title has-link-black-ter is-size-6 has-text-weight-normal">03_conf_hexo</a>
+                    <a href="/2020/03/16/03_conf_hexo/03_conf_hexo/" class="title has-link-black-ter is-size-6 has-text-weight-normal">03_conf_hexo/03_conf_hexo</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -796,16 +800,16 @@ deploy:                                //部署的设置
         
         <article class="media">
             
-            <a href="/2020/03/16/02_install_hexo/" class="media-left">
+            <a href="/2020/03/16/02_install_hexo/02_install_hexo/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="02_install_hexo">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="02_install_hexo/02_install_hexo">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-16T07:46:37.301Z">2020-03-16</time></div>
-                    <a href="/2020/03/16/02_install_hexo/" class="title has-link-black-ter is-size-6 has-text-weight-normal">02_install_hexo</a>
+                    <a href="/2020/03/16/02_install_hexo/02_install_hexo/" class="title has-link-black-ter is-size-6 has-text-weight-normal">02_install_hexo/02_install_hexo</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -815,16 +819,16 @@ deploy:                                //部署的设置
         
         <article class="media">
             
-            <a href="/2020/03/16/01_grasp_hexo/" class="media-left">
+            <a href="/2020/03/16/01_grasp_hexo/01_grasp_hexo/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="01_grasp_hexo">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="01_grasp_hexo/01_grasp_hexo">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-16T07:46:37.277Z">2020-03-16</time></div>
-                    <a href="/2020/03/16/01_grasp_hexo/" class="title has-link-black-ter is-size-6 has-text-weight-normal">01_grasp_hexo</a>
+                    <a href="/2020/03/16/01_grasp_hexo/01_grasp_hexo/" class="title has-link-black-ter is-size-6 has-text-weight-normal">01_grasp_hexo/01_grasp_hexo</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -891,16 +895,16 @@ deploy:                                //部署的设置
         
         <article class="media">
             
-            <a href="/2020/03/16/04_deploy_hexo/" class="media-left">
+            <a href="/2020/03/16/04_deploy_hexo/04_deploy_hexo/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="04_deploy_hexo">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="04_deploy_hexo/04_deploy_hexo">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-16T07:46:37.349Z">2020-03-16</time></div>
-                    <a href="/2020/03/16/04_deploy_hexo/" class="title has-link-black-ter is-size-6 has-text-weight-normal">04_deploy_hexo</a>
+                    <a href="/2020/03/16/04_deploy_hexo/04_deploy_hexo/" class="title has-link-black-ter is-size-6 has-text-weight-normal">04_deploy_hexo/04_deploy_hexo</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -910,16 +914,16 @@ deploy:                                //部署的设置
         
         <article class="media">
             
-            <a href="/2020/03/16/03_conf_hexo/" class="media-left">
+            <a href="/2020/03/16/03_conf_hexo/03_conf_hexo/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="03_conf_hexo">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="03_conf_hexo/03_conf_hexo">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-16T07:46:37.306Z">2020-03-16</time></div>
-                    <a href="/2020/03/16/03_conf_hexo/" class="title has-link-black-ter is-size-6 has-text-weight-normal">03_conf_hexo</a>
+                    <a href="/2020/03/16/03_conf_hexo/03_conf_hexo/" class="title has-link-black-ter is-size-6 has-text-weight-normal">03_conf_hexo/03_conf_hexo</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -929,16 +933,16 @@ deploy:                                //部署的设置
         
         <article class="media">
             
-            <a href="/2020/03/16/02_install_hexo/" class="media-left">
+            <a href="/2020/03/16/02_install_hexo/02_install_hexo/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="02_install_hexo">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="02_install_hexo/02_install_hexo">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-16T07:46:37.301Z">2020-03-16</time></div>
-                    <a href="/2020/03/16/02_install_hexo/" class="title has-link-black-ter is-size-6 has-text-weight-normal">02_install_hexo</a>
+                    <a href="/2020/03/16/02_install_hexo/02_install_hexo/" class="title has-link-black-ter is-size-6 has-text-weight-normal">02_install_hexo/02_install_hexo</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -948,16 +952,16 @@ deploy:                                //部署的设置
         
         <article class="media">
             
-            <a href="/2020/03/16/01_grasp_hexo/" class="media-left">
+            <a href="/2020/03/16/01_grasp_hexo/01_grasp_hexo/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="01_grasp_hexo">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="01_grasp_hexo/01_grasp_hexo">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-16T07:46:37.277Z">2020-03-16</time></div>
-                    <a href="/2020/03/16/01_grasp_hexo/" class="title has-link-black-ter is-size-6 has-text-weight-normal">01_grasp_hexo</a>
+                    <a href="/2020/03/16/01_grasp_hexo/01_grasp_hexo/" class="title has-link-black-ter is-size-6 has-text-weight-normal">01_grasp_hexo/01_grasp_hexo</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -1069,7 +1073,7 @@ deploy:                                //部署的设置
 <script>
 var IcarusThemeSettings = {
     site: {
-        url: 'http://yoursite.com',
+        url: 'http://www.panakot.cn',
         external_link: {"enable":true,"exclude":[]}
     },
     article: {
